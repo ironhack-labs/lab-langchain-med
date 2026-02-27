@@ -1,0 +1,29 @@
+# Environment variables (never commit secrets)
+.env
+
+# ChromaDB local vector store
+chroma_store/
+
+# Datasets (often large, should be downloaded separately)
+datasets/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Model cache (HuggingFace downloads models here — can be large)
+~/.cache/huggingface/
