@@ -1,0 +1,14 @@
+# ChromaDB local vector store files
+chroma.sqlite3
+*.sqlite3
+
+# ChromaDB generated vector index folders
+0a2ee672-1e52-4931-b6ad-9867e7deb2c0/
+67ae833a-05ad-43f1-9742-aef056fb9faa/
+7c9551f8-971b-406a-b17f-371eb1332a79/
+ddcee378-5ce6-4f5c-855a-74d667d16dec/
+
+# Python/Jupyter local files
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
