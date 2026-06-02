@@ -1,0 +1,10 @@
+# Ignore everything by default
+*
+
+# Except these
+!.gitignore
+!lab-langchain-med.ipynb
+!README.md
+!requirements.txt
+!datasets/
+!datasets/articles.csv

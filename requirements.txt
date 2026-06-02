@@ -1,0 +1,28 @@
+# ============================================================
+# LangChain Med — Lab dependencies (Kaggle GPU runtime)
+# Python 3.12 | NVIDIA Tesla T4
+# ============================================================
+#
+# Kaggle ya trae torch con CUDA preinstalado. Si corrés local:
+#   1. Creá un venv: python -m venv .venv && source .venv/bin/activate
+#   2. Instalá:    pip install -r requirements.txt
+#   3. Si tenés GPU NVIDIA, instalá torch manualmente desde pytorch.org
+#
+# Versiones pineadas solo donde hay bugs conocidos.
+# El resto usa latest compatible.
+
+# ── Data ────────────────────────────────────────────────────
+pandas
+numpy>=2.0              # Kaggle usa numpy 2.x; 1.x rompe pandas precompilado
+
+# ── Embeddings & Vector DB ─────────────────────────────────
+chromadb>=0.5.5         # >=0.5.5 evita el crash de ONNX/CoreML en Mac
+
+# ── LLM ─────────────────────────────────────────────────────
+transformers==4.44.2    # Pineado: 4.45+ tiene bug en auto_docstring que
+                        # rompe EncoderDecoderConfig al importar
+torch                   # Kaggle lo da con CUDA; local instala CPU-only
+
+# ── Viz & Utils ─────────────────────────────────────────────
+matplotlib
+scikit-learn
